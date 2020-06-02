@@ -1,0 +1,37 @@
+def inputDetails = "${params.Packages}"
+def cDesc = inputDetails.tokenize(",");
+println("${cDesc.size()}");
+def sparshString;
+
+for (int i=0; i<cDesc.size(); ++i)
+{
+       if("${sparshString}" == ""){
+            
+            sparshString = "[path: '${cDesc.get(i)}']";
+       }else{
+            sparshString = "${sparshString},[path: '${cDesc.get(i)}']";
+       }
+       
+       println (" DEBUG : Input details are, ${cDesc.get(i)} \n");
+       println (" DEBUG : Input details are, ${sparshString} \n");
+}
+
+ sparseCheckout(scm, ['path/to/file.xml'])
+
+pipeline {
+   agent any
+   
+   
+
+   stages {
+      stage('Checkout') {
+         steps {
+             
+	   bat "echo ${params.Packages}";
+	   bat "echo %Packages% "
+           checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: ${sparshString}]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/srikanthd05/DevOps']]])
+         }
+      }
+      
+   }
+}
