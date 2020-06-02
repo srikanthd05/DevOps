@@ -2,6 +2,11 @@ pipeline {
    agent any
 
    stages {
+      stage('Checkout') {
+         steps {
+           checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'assets/IS/packages/LinuxDemo'], [path: 'assets/IS/packages/DemoDevOps']]]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/srikanthd05/DevOps']]])
+         }
+      }
       stage('CodeReview') {
          steps {
             bat '%ISCCR_HOME%/CodeReview -Dcode.review.directory=%WORKSPACE%/assets/IS/packages -Dcode.review.pkgprefix=Demo -Dcode.review.runmode=multi -Dcode.review.folder-prefix=Demo'
