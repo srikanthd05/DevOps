@@ -4,7 +4,8 @@ pipeline {
    stages {
       stage('Checkout') {
          steps {
-	   bat "echo %Packages%"
+	   def sparshInput = %Packages%;
+	   bat "echo %Packages% and sparsh %sparshInput%"
            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'assets/IS/packages/LinuxDemo'], [path: 'assets/IS/packages/DemoDevOps'], [path: 'build.xml'],[path: 'project.properties']]]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/srikanthd05/DevOps']]])
          }
       }
