@@ -18,7 +18,7 @@
 *   def deployPackages="${Packages}";
 */
 
-
+def isPackages="${Packages}";
 
 pipeline {
     agent any 
