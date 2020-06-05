@@ -38,7 +38,7 @@ pipeline {
             }
 	    post {
            always {
-             emailext attachLog: true, attachmentsPattern: "${Report file name}", body: "${currentBuild.currentResult}", to: 'Sreekanth.Dasari@softwareag.com', subject: "${env.JOB_NAME} Deployment Status"
+             emailext body: "${currentBuild.currentResult}", to: 'Sreekanth.Dasari@softwareag.com', subject: "${env.JOB_NAME} Deployment Status"
             }
          }
         }
