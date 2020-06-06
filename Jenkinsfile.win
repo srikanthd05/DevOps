@@ -24,19 +24,24 @@ def targetType= "${TARGET_TYPE}"
 def targetServers="";
 def jobName = "${env.JOB_NAME}"
 def clusters
+def exeState
 
 node ('master'){
   if ('${TARGET_TYPE}' == 'Clusters') {
+       exeState='inside cluster if'
        clusters = Arrays.asList("${TARGETS}".split(','))
 	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
 	   clusters.each{
+	        exeState='inside loop each'
 	       if('${targetServers}'==""){
+	              exeState = 'inside inner if'
 		      targetServers = props["${TARGETS}"]
 		   } else{
 		 targetServers = "'${targetServers}'-props["${TARGETS}"]"
 		}
 	   } 
   } else {
+        exeState='else block'
 	targetServers = "${TARGETS}"
 	}
 }
@@ -49,7 +54,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                bat "echo ${targetType} and ${targetServers}"
+                bat "echo ${targetType} and ${targetServers} ---${exeState}"
 		bat "echo ${replaceAssets}" 
                 bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DDeployableAssets=${replaceAssets} -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} build"
             }
