@@ -23,11 +23,7 @@ def replaceAssets=tempAssets.replaceAll(",",":");
 def targetType= "${TARGET_TYPE}"
 def targetServers='0';
 def jobName = "${env.JOB_NAME}"
-def clusters
-def exeState
 def tempTarget
-def testProperties
-
 node ('master'){
   if ("${TARGET_TYPE}" == 'Clusters') {
        exeState='inside cluster if'
@@ -49,7 +45,7 @@ node ('master'){
 	targetServers = "${TARGETS}"
 	}
 }
-
+targetServers = targetServers.replaceAll(',',':')
 pipeline {
     agent{
     label 'master'
