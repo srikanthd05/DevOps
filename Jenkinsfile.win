@@ -18,8 +18,10 @@
 *   def deployPackages="${Packages}";
 */
 
-def tempAssets="${DeployableAssets}"
+def tempAssets="${PACKAGES}"
 def replaceAssets=tempAssets.replaceAll(",",":");
+def targetType= "${TARGET_TYPE}"
+def targetServers = "${TARGETS}"
 
 pipeline {
     agent any 
@@ -27,7 +29,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                
+                bat "echo ${targetType} and ${targetServers}"
 		bat "echo ${replaceAssets}" 
                 bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DDeployableAssets=${replaceAssets} -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} build"
             }
