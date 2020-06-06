@@ -25,6 +25,7 @@ def targetServers="";
 def jobName = "${env.JOB_NAME}"
 def clusters
 def exeState
+def tempTarget
 
 node ('master'){
   if ("${TARGET_TYPE}" == 'Clusters') {
@@ -37,7 +38,8 @@ node ('master'){
 	              exeState = 'inside inner if'
 		      targetServers = props["${TARGETS}"]
 		   } else{
-		 targetServers = "'${targetServers}'-props["${TARGETS}"]"
+		   tempTarget = props["${TARGETS}"]
+		 targetServers = "'${targetServers}'-'${tempTarget}'"
 		}
 	   } 
   } else {
