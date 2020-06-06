@@ -41,7 +41,7 @@ node ('master'){
 		   } else {
 		   
 		   tempTarget = props["${it}"]
-		 targetServers = "'${targetServers}'-'${tempTarget}'"
+		 targetServers = "${targetServers}-${tempTarget}"
 		}
 	   } 
   } else {
