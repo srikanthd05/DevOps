@@ -27,7 +27,7 @@ def clusters
 def exeState
 
 node ('master'){
-  if ('${targetType}' == 'Clusters') {
+  if (${TARGET_TYPE} == 'Clusters') {
        exeState='inside cluster if'
        clusters = Arrays.asList("${TARGETS}".split(','))
 	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
