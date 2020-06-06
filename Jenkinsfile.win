@@ -33,7 +33,7 @@ node ('master'){
 	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
 	   clusters.each{
 	        exeState='inside loop each'
-	       if('${targetServers}'==""){
+	       if("${targetServers}"==""){
 	              exeState = 'inside inner if'
 		      targetServers = props["${TARGETS}"]
 		   } else{
