@@ -25,7 +25,7 @@ def targetServers="";
 def jobName = "${env.JOB_NAME}"
 def clusters
 
-node{
+node ('master'){
  if ('${TARGET_TYPE}' == 'Clusters') {
                 clusters = "${TARGETS}".split(',')
 		props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
