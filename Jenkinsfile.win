@@ -27,7 +27,7 @@ def clusters
 
 node ('master'){
   if ('${TARGET_TYPE}' == 'Clusters') {
-       clusters = "${TARGETS}".split(',')
+       clusters = Arrays.asList("${TARGETS}".split(','))
 	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
 	   clusters.each{
 	       if('${targetServers}'==""){
