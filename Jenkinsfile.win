@@ -26,6 +26,7 @@ def jobName = "${env.JOB_NAME}"
 def clusters
 def exeState
 def tempTarget
+def testProperties
 
 node ('master'){
   if ("${TARGET_TYPE}" == 'Clusters') {
@@ -36,10 +37,10 @@ node ('master'){
 	        exeState='inside loop each'
 	       if("${targetServers}" == '0'){
 	              exeState = 'inside inner if'
-		      targetServers = props["${TARGETS}"]
+		      targetServers = props["${it}"]
 		   } else {
 		   
-		   tempTarget = props["${TARGETS}"]
+		   tempTarget = props["${it}"]
 		 targetServers = "'${targetServers}'-'${tempTarget}'"
 		}
 	   } 
