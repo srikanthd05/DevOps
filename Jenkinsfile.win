@@ -21,13 +21,23 @@
 def tempAssets="${PACKAGES}"
 def replaceAssets=tempAssets.replaceAll(",",":");
 def targetType= "${TARGET_TYPE}"
-def targetServers = "${TARGETS}"
+def targetServers="";
+def jobName = "${env.JOB_NAME}"
+def clusters
+
 node{
- if (${targetType} == 'Clusters') {
-                echo 'I only execute on the master branch'
-            } else {
-                echo 'I execute elsewhere'
-            }  
+ if ('${TARGET_TYPE}' == 'Clusters') {
+                clusters = "${TARGETS}".split(',')
+		props = readProperties file: 'build.properties';
+		clusters.each{
+		if('${targetServers}'==""){
+		targetServers = props["${TARGETS}"]
+		}else{
+		 targetServers = "'${targetServers}'-props["${TARGETS}"]"
+		} 
+	}else{
+	targetServers = "${TARGETS}"
+	}
 }
 
 pipeline {
