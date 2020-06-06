@@ -21,7 +21,7 @@
 def tempAssets="${PACKAGES}"
 def replaceAssets=tempAssets.replaceAll(",",":");
 def targetType= "${TARGET_TYPE}"
-def targetServers="";
+def targetServers='0';
 def jobName = "${env.JOB_NAME}"
 def clusters
 def exeState
@@ -34,10 +34,11 @@ node ('master'){
 	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
 	   clusters.each{
 	        exeState='inside loop each'
-	       if("${targetServers}"==""){
+	       if("${targetServers}"=='0'){
 	              exeState = 'inside inner if'
 		      targetServers = props["${TARGETS}"]
 		   } else{
+		   
 		   tempTarget = props["${TARGETS}"]
 		 targetServers = "'${targetServers}'-'${tempTarget}'"
 		}
