@@ -70,7 +70,7 @@ pipeline {
 	   
 	     
 		emailext 
-body: "Hi,
+body: "Hi\\,
 
 Deployment for below packages done successfully by Jenkins.
 
@@ -80,7 +80,7 @@ On
 
 '${targetServers}'
 
-Thanks,
+Thanks\\,
 Jenkins
 Note: This is system generated email, Please do not reply.", 
 to: 'Sreekanth.Dasari@softwareag.com', 
