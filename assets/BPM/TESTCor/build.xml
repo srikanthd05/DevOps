@@ -4,7 +4,7 @@
 	name="webMethods Business Process Model">
 
 	<!-- These properties need to be modified when doing a stand alone ant call -->
-	<property name="default.build.output.dir" value="${basedir}" />
+	<property name="default.build.output.dir" value="C:/Sreekanth/Practice/Jenkins/BPM" />
 	<property name="default.sag.install.dir" value="" />
 	<property name="default.build.version" value="" />
 	<property name="default.build.timestamp" value="" />
