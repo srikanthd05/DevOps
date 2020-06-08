@@ -1,0 +1,23 @@
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+>
+	<CONTEXT alias="7DB92C46-BD09-C1F6-1F06-F05C8A8C9975.task.app">
+		<folder name="taskCreationNew Task Details" description="taskCreationNew Task Details" alias="7DB92C46-BD09-C1F6-1F06-F05C8A8C9975.task.app.details.page" isTaskFolder="false">
+            <page>
+            	<row>
+            		<column>
+            			<test21___taskcreationnewtaskoverview name="Task View" alias="7DB92C46-BD09-C1F6-1F06-F05C8A8C9975.task.app.details.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+            			</test21___taskcreationnewtaskoverview>             			
+                    </column>
+                </row>
+                <hobos/>
+            </page>
+        </folder>
+        <test21___taskcreationnewtaskview name="New Task View" alias="7DB92C46-BD09-C1F6-1F06-F05C8A8C9975.task.app.details.view.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+        </test21___taskcreationnewtaskview> 
+    </CONTEXT>
+</CONFIG>
