@@ -67,7 +67,35 @@ pipeline {
             }
 	    post {
            always {
-             emailext body: "${currentBuild.currentResult}", to: 'Sreekanth.Dasari@softwareag.com', subject: "${env.JOB_NAME} Deployment Status"
+	   
+	     publishers {
+		extendedEmail {
+			recipientList("sreekanth.dasari@softwareag.com")
+			contentType("text/html")
+			defaultSubject("ISCCR Report")
+			defaultContent("""Hi,
+
+Deployment for below packages done successfully by Jenkins.
+
+EOE_DEMC
+
+On
+
+"${targetServers}"
+
+Thanks,
+Jenkins
+Note: This is system generated email, Please do not reply.""")
+			
+			preSendScript("\$DEFAULT_PRESEND_SCRIPT")
+			attachBuildLog(false)
+			compressBuildLog(false)
+			replyToList("sreekanth.dasari@softwareag.com")
+			saveToWorkspace(false)
+			disabled(false)
+		}
+}
+            
             }
          }
         }
