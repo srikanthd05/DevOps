@@ -69,12 +69,6 @@ pipeline {
            always {
 	   
 	     
-		emailext 
-body: "Hi'\,' '\n'Deployment for below packages done successfully by Jenkins.'\n' '${replaceAssets} '\n''\n'On'\n''\n''${targetServers}''\n''\n'Thanks'\,''\n'Jenkins'\n'Note'\:' This is system generated email, Please do not reply.", 
-to: 'Sreekanth.Dasari@softwareag.com', 
-subject: "${env.JOB_NAME} Deployment Status"
-		
-
             
             }
          }
