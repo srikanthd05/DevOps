@@ -18,6 +18,7 @@
 *   def deployPackages="${Packages}";
 */
 
+def tempApplication=$
 def tempAssets="${PACKAGES}"
 def replaceAssets=tempAssets.replaceAll(",",":");
 def targetType= "${TARGET_TYPE}"
