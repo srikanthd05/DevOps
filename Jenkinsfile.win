@@ -68,7 +68,7 @@ pipeline {
 	    post {
            always {
 	   
-	     publishers {
+	     
 		extendedEmail {
 			recipientList("sreekanth.dasari@softwareag.com")
 			contentType("text/html")
@@ -94,7 +94,7 @@ Note: This is system generated email, Please do not reply.""")
 			saveToWorkspace(false)
 			disabled(false)
 		}
-}
+
             
             }
          }
