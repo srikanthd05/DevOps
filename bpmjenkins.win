@@ -1,0 +1,77 @@
+/*
+* Copyright © 2010 - 2013 Apama Ltd.
+* Copyright © 2013 - 2018 Software AG, Darmstadt, Germany and/or its licensors
+*
+* SPDX-License-Identifier: Apache-2.0
+*
+*   Licensed under the Apache License, Version 2.0 (the "License");
+*   you may not use this file except in compliance with the License.
+*   You may obtain a copy of the License at
+*
+*       http://www.apache.org/licenses/LICENSE-2.0
+*
+*   Unless required by applicable law or agreed to in writing, software
+*   distributed under the License is distributed on an "AS IS" BASIS,
+*   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*   See the License for the specific language governing permissions and
+*   limitations under the License.                                                            
+*   def deployPackages="${Packages}";
+*/
+
+def tempAssets="${PACKAGES}"
+def replaceAssets=tempAssets.replaceAll(",",":");
+def targetType= "${TARGET_TYPE}"
+def targetServers='0';
+def jobName = "${env.JOB_NAME}"
+def tempTarget
+def isCluster = 'false'
+node ('master'){
+  if ("${TARGET_TYPE}" == 'Clusters') {
+       exeState='inside cluster if'
+       isCluster = 'true'
+       clusters = Arrays.asList("${TARGETS}".split(','))
+	   props = readProperties file: 'C:\\Sreekanth\\Practice\\Jenkins\\HOME\\workspace\\AntTestPipeline\\build.properties'
+	   clusters.each{
+	        exeState='inside loop each'
+	       if("${targetServers}" == '0'){
+	              exeState = 'inside inner if'
+		      targetServers = props["${it}"]
+		   } else {
+		   
+		   tempTarget = props["${it}"]
+		 targetServers = "${targetServers}-${tempTarget}"
+		}
+	   } 
+  } else {
+        exeState='else block'
+	targetServers = "${TARGETS}"
+	}
+}
+targetServers = targetServers.replaceAll(',',':')
+pipeline {
+    agent{
+    label 'master'
+    } 
+
+    stages {
+        stage('Build'){
+            steps {
+                bat "echo ${targetType} and ${targetServers} ---${exeState}"
+		bat "echo ${replaceAssets}" 
+                bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DtargetServers=${targetServers} -DdeploymentType=${DEPLOYMENT_TYPE} -DisCluster=${isCluster} -DDeployableAssets=${replaceAssets} -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} build"
+            }
+        }
+        stage('Deploy') {
+            steps {
+		bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DtargetServers=${targetServers} -DdeploymentType=${DEPLOYMENT_TYPE} -DisCluster=${isCluster} -DDeployableAssets=${replaceAssets} -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} deploy"
+            }
+
+        }
+ 	stage('Test') {
+            steps {
+		bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DtargetServers=${targetServers} -DdeploymentType=${DEPLOYMENT_TYPE} -DisCluster=${isCluster} -DDeployableAssets=${replaceAssets} -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} test"
+		junit 'report/'
+            }
+        }
+    }
+}
