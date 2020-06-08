@@ -41,6 +41,10 @@
 	<target name="buildDeployTest" depends="">
         	<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="buildDeployTest" inheritAll="true"/>
 	</target>
+	
+	<target name="codeReview" depends="">
+        	<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="codeReview" inheritAll="true"/>
+	</target>
 
         <target name="build" depends="">
         	<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="build" inheritAll="true"/>
