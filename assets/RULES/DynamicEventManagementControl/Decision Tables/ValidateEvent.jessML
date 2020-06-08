@@ -26,7 +26,7 @@
 </template>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/ValidateEvent.decisiontable_dtrule1</name>
+  <name>$$MODULENAME$$::ValidateEvent.decisiontable_dtrule1</name>
   <lhs>
     <group>
       <name>and</name>

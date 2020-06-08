@@ -26,7 +26,7 @@
 </template>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule1</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule1</name>
   <lhs>
     <group>
       <name>and</name>
@@ -194,7 +194,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule2</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule2</name>
   <lhs>
     <group>
       <name>and</name>
@@ -362,7 +362,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule3</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule3</name>
   <lhs>
     <group>
       <name>and</name>
@@ -530,7 +530,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule4</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule4</name>
   <lhs>
     <group>
       <name>and</name>
@@ -698,7 +698,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule5</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule5</name>
   <lhs>
     <group>
       <name>and</name>
@@ -866,7 +866,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule6</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule6</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1034,7 +1034,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule7</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule7</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1202,7 +1202,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule8</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule8</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1370,7 +1370,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule9</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule9</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1538,7 +1538,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule10</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule10</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1706,7 +1706,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule11</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule11</name>
   <lhs>
     <group>
       <name>and</name>
@@ -1874,7 +1874,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule12</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule12</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2042,7 +2042,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule13</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule13</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2210,7 +2210,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule14</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule14</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2378,7 +2378,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule15</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule15</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2546,7 +2546,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule16</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule16</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2714,7 +2714,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule17</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule17</name>
   <lhs>
     <group>
       <name>and</name>
@@ -2882,7 +2882,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule18</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule18</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3050,7 +3050,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule19</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule19</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3218,7 +3218,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule20</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule20</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3386,7 +3386,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule21</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule21</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3554,7 +3554,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule22</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule22</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3722,7 +3722,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule23</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule23</name>
   <lhs>
     <group>
       <name>and</name>
@@ -3890,7 +3890,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule24</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule24</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4058,7 +4058,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule25</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule25</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4226,7 +4226,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule26</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule26</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4394,7 +4394,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule27</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule27</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4562,7 +4562,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule28</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule28</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4730,7 +4730,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule29</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule29</name>
   <lhs>
     <group>
       <name>and</name>
@@ -4898,7 +4898,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule30</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule30</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5066,7 +5066,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule31</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule31</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5234,7 +5234,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule32</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule32</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5402,7 +5402,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule33</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule33</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5570,7 +5570,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule34</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule34</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5738,7 +5738,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule35</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule35</name>
   <lhs>
     <group>
       <name>and</name>
@@ -5906,7 +5906,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule36</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule36</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6074,7 +6074,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule37</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule37</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6242,7 +6242,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule38</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule38</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6410,7 +6410,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule39</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule39</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6578,7 +6578,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule40</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule40</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6746,7 +6746,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule41</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule41</name>
   <lhs>
     <group>
       <name>and</name>
@@ -6914,7 +6914,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule42</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule42</name>
   <lhs>
     <group>
       <name>and</name>
@@ -7082,7 +7082,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule43</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule43</name>
   <lhs>
     <group>
       <name>and</name>
@@ -7250,7 +7250,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule44</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule44</name>
   <lhs>
     <group>
       <name>and</name>
@@ -7418,7 +7418,7 @@
 </rule>
 
 <rule>
-  <name>$$MODULENAME$$::Decision_Tables/validateTreatment.decisiontable_dtrule45</name>
+  <name>$$MODULENAME$$::validateTreatment.decisiontable_dtrule45</name>
   <lhs>
     <group>
       <name>and</name>

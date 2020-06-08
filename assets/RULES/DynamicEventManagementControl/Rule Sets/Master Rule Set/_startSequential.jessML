@@ -5,15 +5,15 @@
   <arguments>
   </arguments>
   <funcall>
-    <name>Decision_Tables/validateTreatment.decisiontable_sequentialProcessing</name>
+    <name>validateTreatment.decisiontable_sequentialProcessing</name>
   </funcall>
   
   <funcall>
-    <name>Decision_Tables/userTodefinefromConsole.decisiontable_sequentialProcessing</name>
+    <name>userTodefinefromConsole.decisiontable_sequentialProcessing</name>
   </funcall>
   
   <funcall>
-    <name>Decision_Tables/ValidateEvent.decisiontable_sequentialProcessing</name>
+    <name>ValidateEvent.decisiontable_sequentialProcessing</name>
   </funcall>
   
 </function>
